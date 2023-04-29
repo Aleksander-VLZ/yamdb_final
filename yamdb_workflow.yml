@@ -57,8 +57,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
 
-        # Without removing .env file it adds same strings to file
-        # Obviously it's useless, so deleting it first
         script: |
           sudo docker-compose stop
           sudo docker-compose rm web
