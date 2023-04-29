@@ -60,6 +60,7 @@ jobs:
         # Without removing .env file it adds same strings to file
         # Obviously it's useless, so deleting it first
         script: |
+          sudo docker-compose pull aleksandervlz/api_yamdb
           sudo docker-compose stop
           sudo docker-compose rm web
           rm -r .env
